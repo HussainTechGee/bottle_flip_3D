@@ -6,12 +6,16 @@ public class ObjectRotate : MonoBehaviour
 {
     public Transform targetTran;
     public Vector3 rotateValue;
-    public bool infinity;
+    public bool infinity,reverse;
+    public float duration;
     bool isRotate;
+    Vector3 currentrotation ;
     // Start is called before the first frame update
     void Start()
     {
+         currentrotation = targetTran.rotation.eulerAngles;
         isRotate = false;
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,6 +24,7 @@ public class ObjectRotate : MonoBehaviour
             if(!isRotate)
             {
                 Debug.Log("Rotate .....");
+                Debug.Log(currentrotation);
                 if (infinity)
                 {
                     targetTran.gameObject.SetActive(true);
@@ -27,11 +32,21 @@ public class ObjectRotate : MonoBehaviour
                 }
                 else
                 {
-                    targetTran.DOLocalRotate(rotateValue, 1);
+                    targetTran.DOLocalRotate(rotateValue, duration);
+                    if(reverse){
+                      StartCoroutine(rotateObject());
+                    }
+                
                 }
                 
             }
             isRotate = true;
         }
+    }
+
+    private IEnumerator rotateObject(){
+        yield return new WaitForSeconds(duration);
+        targetTran.DOLocalRotate(currentrotation, duration);
+
     }
 }

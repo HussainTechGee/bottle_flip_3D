@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     public float force;
     public Vector3 centerMass;
     public ParticleSystem HitParticle;
-    Rigidbody rb;
-    bool down, isJump, secondJump;
+    public Rigidbody rb;
+    public bool down, isJump, secondJump;
     //      ----------------------------------------Instance
     public static PlayerController PlayerControllerInstance;
     [HideInInspector] public bool ground = false, finish = false;
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
 
     }
-     void FlipObject(){
+    public void FlipObject(){
 
                     if(transform.rotation.eulerAngles.z < 45 || transform.rotation.eulerAngles.z >315){
                     transform.rotation = Quaternion.identity;

@@ -4,6 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 public class ObjectMove : MonoBehaviour
 {
+    public GameObject targetObject;
+    public float duration;
     bool moved;
     public Vector3 targetValueAdd;
     // Start is called before the first frame update
@@ -18,7 +20,7 @@ public class ObjectMove : MonoBehaviour
         {
             if(!moved)
             {
-                transform.DOLocalMove(transform.position + targetValueAdd, 1f);
+               targetObject.transform.DOLocalMove(/*targetObject.transform.position +*/ targetValueAdd, duration);
             }
             moved = true;
            

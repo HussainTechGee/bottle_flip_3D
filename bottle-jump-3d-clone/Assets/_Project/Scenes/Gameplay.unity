@@ -724,6 +724,10 @@ MonoBehaviour:
   force: 286
   centerMass: {x: 0, y: -0.5, z: 0}
   HitParticle: {fileID: 824188655}
+  rb: {fileID: 0}
+  down: 0
+  isJump: 0
+  secondJump: 0
   ground: 0
   finish: 0
 --- !u!114 &475075732
@@ -738,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf424707012acea479829ea1b0c18a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 5
+  fallMultiplier: 4.5
 --- !u!65 &475075733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1586,7 +1590,7 @@ Transform:
   m_GameObject: {fileID: 783851665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.3335, y: 0.6968, z: 1.12}
-  m_LocalScale: {x: 57.019196, y: 0.3460701, z: 0.08639809}
+  m_LocalScale: {x: 100, y: 0.3460701, z: 0.08639809}
   m_Children: []
   m_Father: {fileID: 825401210}
   m_RootOrder: 3
@@ -6733,8 +6737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGame: 0
-  currentlevel: {fileID: 0}
-  nextlevel: {fileID: 0}
 --- !u!1 &1191889267
 GameObject:
   m_ObjectHideFlags: 0
@@ -6762,7 +6764,7 @@ Transform:
   m_GameObject: {fileID: 1191889267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.3335, y: 0.4383, z: 0.94060004}
-  m_LocalScale: {x: 57.019196, y: 0.31249493, z: 0.3436}
+  m_LocalScale: {x: 100, y: 0.31249493, z: 0.3436}
   m_Children: []
   m_Father: {fileID: 825401210}
   m_RootOrder: 2
@@ -7480,6 +7482,9 @@ MonoBehaviour:
   - {fileID: 3677997404222671749, guid: 60183665bbc74424f9d2a150ee2f737a, type: 3}
   - {fileID: 3677997404222671749, guid: e0f9448474e97cd48bd2b222475ac83b, type: 3}
   - {fileID: 4175734563254563176, guid: afd8016dca2867647a3a0ca763fe9e62, type: 3}
+  - {fileID: 4175734563254563176, guid: 559bc889956cac7409aec19445af9e27, type: 3}
+  - {fileID: 4175734563254563176, guid: 6a883b3c2483af74bad3abe41996bbf1, type: 3}
+  - {fileID: 4175734563254563176, guid: 7e420dcb23a38fd4683134b5b30da9ca, type: 3}
   FinishParticles: {fileID: 4133688368997760042, guid: d7caa9ea619620d4787369adee66f02d, type: 3}
   currentLevelIndex: 0
   StartText: {fileID: 1309074028}
@@ -7853,7 +7858,7 @@ GameObject:
   - component: {fileID: 1646183353}
   - component: {fileID: 1646183352}
   - component: {fileID: 1646183351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: front wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7869,7 +7874,7 @@ Transform:
   m_GameObject: {fileID: 1646183349}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 21.3335, y: 15.6642, z: 1.6288}
-  m_LocalScale: {x: 57.019196, y: 1, z: 32.205666}
+  m_LocalScale: {x: 100, y: 1, z: 32.205666}
   m_Children: []
   m_Father: {fileID: 825401210}
   m_RootOrder: 1
@@ -8691,7 +8696,7 @@ Transform:
   m_GameObject: {fileID: 1894950274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.3335, y: 0, z: -4.4326}
-  m_LocalScale: {x: 57.019196, y: 1, z: 13.829047}
+  m_LocalScale: {x: 100, y: 1, z: 13.829047}
   m_Children: []
   m_Father: {fileID: 825401210}
   m_RootOrder: 0
@@ -9144,6 +9149,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2012468488}
     m_Modifications:
+    - target: {fileID: 208081431573705700, guid: 5fc9cc537ca00f9439c5bb5a6fa1ecae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208081431659266696, guid: 5fc9cc537ca00f9439c5bb5a6fa1ecae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2511480150160396180, guid: 5fc9cc537ca00f9439c5bb5a6fa1ecae, type: 3}
       propertyPath: m_Name
       value: FinfihBuckets
