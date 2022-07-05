@@ -21,7 +21,11 @@ public class ObjectRotate : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            if(!isRotate)
+           Invoke("delay",0.035f);
+        }
+    }
+ private void delay(){
+ if(!isRotate)
             {
                 Debug.Log("Rotate .....");
                 Debug.Log(currentrotation);
@@ -41,9 +45,7 @@ public class ObjectRotate : MonoBehaviour
                 
             }
             isRotate = true;
-        }
-    }
-
+ }
     private IEnumerator rotateObject(){
         yield return new WaitForSeconds(duration);
         targetTran.DOLocalRotate(currentrotation, duration);
