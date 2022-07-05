@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using MoreMountains.NiceVibrations;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    
     public Transform GraphicTrans;
     public float force;
     public Vector3 centerMass;
     public ParticleSystem HitParticle;
     public Rigidbody rb;
-    public bool down, isJump, secondJump;
+    bool down, secondJump;
+    public bool isJump;
     //      ----------------------------------------Instance
     public static PlayerController PlayerControllerInstance;
     [HideInInspector] public bool ground = false, finish = false;
@@ -47,6 +51,31 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Mouse Up");
             }
         }
+
+        // if (down)
+        // {
+        //     down = false;
+        //     //First Jump
+        //     if (!isJump)
+        //     {
+        //         Debug.Log("First Jump");
+        //         isJump = true;
+
+        //         rb.velocity = (new Vector3(2f,4f,0) * Time.deltaTime * force);
+        //         FlipObject();
+        //         // SecondFlip();
+        //         //StartCoroutine(RotateGraphics(.9f));
+        //     }
+        //     else if (!secondJump)
+        //     {
+        //         Debug.Log("second Jump");
+        //         secondJump = true;
+        //         rb.velocity = (new Vector3(1.7f,4.5f, 0) * Time.deltaTime * force);
+        //         // StartCoroutine(RotateGraphics(.9f));
+        //         // SecondFlip();
+        //         FlipObject();
+        //     }
+        // }
     }
     public static bool IsPointerOverGameObject()
     {
@@ -150,20 +179,22 @@ public class PlayerController : MonoBehaviour
     }
     public void FlipObject(){
 
-                    if(transform.rotation.eulerAngles.z < 45 || transform.rotation.eulerAngles.z >315){
-                    transform.rotation = Quaternion.identity;
-                        rb.DORotate(new Vector3(0, 0, -360), 1.1f, RotateMode.LocalAxisAdd);
-                    }else if(transform.rotation.eulerAngles.z<315 &&  transform.rotation.eulerAngles.z> 225){
-                        //  rb.DORotate(new Vector3(0, 0, 0), 1.1f, RotateMode.Fast);
+                    if(transform.rotation.eulerAngles.z<315 &&  transform.rotation.eulerAngles.z> 225){
+                        //  rb.DORotate(new Vector3(0, 0, 0), 1.1f, RotateMode.Fast); 
                         float remaining = transform.rotation.eulerAngles.z-360;
                         rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);  
                     }  
-                    else if(transform.rotation.eulerAngles.z < 225 && transform.rotation.eulerAngles.z > 135){
+                    else  if(transform.rotation.eulerAngles.z < 225 && transform.rotation.eulerAngles.z > 135){
 
                         float remaining = transform.rotation.eulerAngles.z-360;
                         rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
 
-                    }else if(transform.rotation.eulerAngles.z<135 && transform.rotation.eulerAngles.z>45){
+                    }else if(transform.rotation.eulerAngles.z < 45 || transform.rotation.eulerAngles.z >315){
+                    transform.rotation = Quaternion.identity;
+                        rb.DORotate(new Vector3(0, 0, -360), 1.1f, RotateMode.LocalAxisAdd);
+                    }else
+                    
+                    if(transform.rotation.eulerAngles.z<135 && transform.rotation.eulerAngles.z>45){
 
                         float remaining = transform.rotation.eulerAngles.z-360;
                          rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
@@ -171,7 +202,7 @@ public class PlayerController : MonoBehaviour
                     }
                     else{
                          float remaining = transform.rotation.eulerAngles.z-360;
-                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
+                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z ), 1.1f, RotateMode.Fast);
                     }
      }
     void FlipObject1()
@@ -204,6 +235,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("path"))
         {
+            MMVibrationManager.Haptic(HapticTypes.SoftImpact);
             isJump = false;
             secondJump = false;
           //  rb.constraints = RigidbodyConstraints.None;
@@ -211,6 +243,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("ground"))
         {
+            MMVibrationManager.Haptic(HapticTypes.Failure);
             // Time.timeScale = 0;
             Debug.Log("Game End");
             rb.constraints = RigidbodyConstraints.None; ;
@@ -246,6 +279,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("path"))
         {
+        
             //rb.constraints=RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
         }
     }
