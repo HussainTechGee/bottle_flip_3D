@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 6715191216350673245}
   - component: {fileID: 7686952080204128810}
   - component: {fileID: 5572592317731523766}
+  - component: {fileID: 1971117052119961808}
   m_Layer: 0
   m_Name: Chair2
   m_TagString: Untagged
@@ -552,6 +553,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1971117052119961808
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768760439485447051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -587340726572068259, guid: 9f469da9cfb43b94bade1379700cdb72, type: 3}
 --- !u!1 &940160021798292381
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,9 +918,10 @@ GameObject:
   - component: {fileID: 470598489358572466}
   - component: {fileID: 7471632555184142186}
   - component: {fileID: 6934637938589251981}
+  - component: {fileID: 4088904779990052931}
   m_Layer: 0
   m_Name: Umbrella7
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,6 +995,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4088904779990052931
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275609283587380716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2356158273436296194, guid: 9f469da9cfb43b94bade1379700cdb72, type: 3}
 --- !u!1 &1816763324988478903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,9 +2322,10 @@ GameObject:
   - component: {fileID: 7973072517599872771}
   - component: {fileID: 814182223250003996}
   - component: {fileID: 5323358636033558553}
+  - component: {fileID: 4368183183801611083}
   m_Layer: 0
   m_Name: Toy_Chair3
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2364,6 +2395,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4368183183801611083
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824295847028413960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 318.6223, y: 31.732464, z: 225.3404}
+  m_Center: {x: 0, y: -103.19295, z: 0}
 --- !u!1 &3885516051282375216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,9 +2419,10 @@ GameObject:
   - component: {fileID: 4107779903094947724}
   - component: {fileID: 525992727266382706}
   - component: {fileID: 626072009337128361}
+  - component: {fileID: 1842812600340906966}
   m_Layer: 0
   m_Name: Umbrella7 (2)
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2451,6 +2496,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1842812600340906966
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3885516051282375216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2356158273436296194, guid: 9f469da9cfb43b94bade1379700cdb72, type: 3}
 --- !u!1 &3962113578437994785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,9 +3040,10 @@ GameObject:
   - component: {fileID: 3459904972393818467}
   - component: {fileID: 8648657069960403113}
   - component: {fileID: 6760853080178138448}
+  - component: {fileID: 5412332866273488435}
   m_Layer: 0
   m_Name: Piyano 1
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3054,6 +3114,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5412332866273488435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5307046354941051494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1334.0098, y: 184.53531, z: 524.25165}
+  m_Center: {x: -0.00048828125, y: -0.000061035156, z: 0}
 --- !u!1 &5510592845291730898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,7 +3286,7 @@ GameObject:
   - component: {fileID: 5481887505817248555}
   m_Layer: 0
   m_Name: Drum_1
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3297,6 +3370,7 @@ GameObject:
   - component: {fileID: 3075426617638913742}
   - component: {fileID: 8285168975182642356}
   - component: {fileID: 7836471560627777795}
+  - component: {fileID: 4358330942872272513}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -3367,6 +3441,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4358330942872272513
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6913093168252713142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6264831526926562434, guid: 9f469da9cfb43b94bade1379700cdb72, type: 3}
 --- !u!1 &7046086731088720913
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,9 +5335,10 @@ GameObject:
   - component: {fileID: 7681359492770966450}
   - component: {fileID: 4945132730499391539}
   - component: {fileID: 3854733303779669421}
+  - component: {fileID: 1744309549667992666}
   m_Layer: 0
   m_Name: Toy_Chair3
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5319,6 +5408,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1744309549667992666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946159512772708159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 318.6223, y: 32.430077, z: 225.3404}
+  m_Center: {x: 0, y: -102.84415, z: 0}
 --- !u!1 &9189951316702348155
 GameObject:
   m_ObjectHideFlags: 0

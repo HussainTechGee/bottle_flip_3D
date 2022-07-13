@@ -3112,9 +3112,10 @@ GameObject:
   - component: {fileID: 4830676094559620001}
   - component: {fileID: 4830676094559620003}
   - component: {fileID: 4830676094559620000}
+  - component: {fileID: 211568702153471419}
   m_Layer: 0
   m_Name: pCube25 (3)
-  m_TagString: Untagged
+  m_TagString: path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3182,6 +3183,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &211568702153471419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830676094559620014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 99.99999, z: 99.99999}
+  m_Center: {x: 0.00048828125, y: 0, z: 0}
 --- !u!1 &4830676094603099308
 GameObject:
   m_ObjectHideFlags: 0

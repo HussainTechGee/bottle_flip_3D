@@ -671,7 +671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475075727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.85, y: 4.67, z: 0.359}
+  m_LocalPosition: {x: -0.85, y: 6.09, z: 0.359}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 99456407}
@@ -6605,6 +6605,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6691,6 +6692,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetPlayer: {fileID: 475075728}
   offset: {x: 1, y: 6, z: -21}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &985569948
 GameObject:
   m_ObjectHideFlags: 0
@@ -7503,16 +7537,16 @@ MonoBehaviour:
   - {fileID: 589059452247223371, guid: 6b9a588a19def9247b021e00fb05e711, type: 3}
   - {fileID: 3344403821894675868, guid: aee8c0dfff8d7fd448417c995c19186f, type: 3}
   - {fileID: 2169405347140015345, guid: cf8bfda7b85b7224aad6ccedfa7c191e, type: 3}
+  - {fileID: 8193480603438343342, guid: 33a04ed6d2ff13c4899cd4b3b109af4e, type: 3}
+  - {fileID: 9125844091690359292, guid: 8725eb4479fae0143b0e825ef3d4d658, type: 3}
+  - {fileID: 4830676094339238690, guid: cba8c07997bc8094b8bfe1e4587b7586, type: 3}
+  - {fileID: 4169633015150315021, guid: 8926c9bbaad9bf04ca94a99860e4e16b, type: 3}
   - {fileID: 4708896566904901566, guid: a3fae5768b43df548b806d7bb0b44f8e, type: 3}
   - {fileID: 4433458876705793354, guid: 358927d8cc115b5468f03baec2b143fa, type: 3}
   - {fileID: 2979215187789693105, guid: d0ecd97bc49dd3940b46d5807c0e68f9, type: 3}
   - {fileID: 2049638056779720703, guid: 9de62ea0992bbb44c9d24d561893e32d, type: 3}
   - {fileID: 4688812172148965333, guid: d3f32b7c5d2219c4e963b52b115b5b7f, type: 3}
   - {fileID: 2169405347140015345, guid: cf8bfda7b85b7224aad6ccedfa7c191e, type: 3}
-  - {fileID: 8193480603438343342, guid: 33a04ed6d2ff13c4899cd4b3b109af4e, type: 3}
-  - {fileID: 9125844091690359292, guid: 8725eb4479fae0143b0e825ef3d4d658, type: 3}
-  - {fileID: 4830676094339238690, guid: cba8c07997bc8094b8bfe1e4587b7586, type: 3}
-  - {fileID: 4169633015150315021, guid: 8926c9bbaad9bf04ca94a99860e4e16b, type: 3}
   FinishParticles: {fileID: 4133688368997760042, guid: d7caa9ea619620d4787369adee66f02d, type: 3}
   currentLevelIndex: 0
   StartText: {fileID: 1309074028}
