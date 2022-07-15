@@ -8,12 +8,14 @@ public class ObjectMove : MonoBehaviour
     Rigidbody rb;
     public float duration;
     bool moved;
-    public bool isreverse;
+    public bool isreverse,infinite;
     public Vector3 targetValueAdd;
+    Vector3 startpositon;
     // Start is called before the first frame update
     void Start()
     {
         moved = false;
+        startpositon = targetObject.transform.position;
         if(isreverse){
          rb = targetObject.GetComponent<Rigidbody>();
         }
@@ -25,20 +27,36 @@ public class ObjectMove : MonoBehaviour
         {
             if(!moved)
             {
-               targetObject.transform.DOLocalMove(/*targetObject.transform.position +*/ targetValueAdd, duration);
-               if(isreverse){
-                StartCoroutine(reverse());
-               }
+                 StartCoroutine(movetotarget());
+              
             }
             moved = true;
            
         }
     }
+ private IEnumerator movetotarget(){
+     targetObject.transform.DOLocalMove(/*targetObject.transform.position +*/ targetValueAdd, duration);
+     yield return new WaitForSeconds(duration);
+      
+    StartCoroutine(reverse());
 
+    
+    
+ }
     private IEnumerator reverse(){
 
-        yield return new WaitForSeconds(duration);
+        
+        if(isreverse){
+       yield return new WaitForSeconds(duration);
         targetObject.GetComponent<BoxCollider>().isTrigger=true;
         rb.isKinematic=false;
+        }else
+        if(infinite)
+        {
+            targetObject.transform.DOLocalMove(/*targetObject.transform.position +*/ startpositon, duration);
+            yield return new WaitForSeconds(duration);
+            StartCoroutine(movetotarget());
+        }
+
     }
 }
