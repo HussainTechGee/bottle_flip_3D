@@ -8,6 +8,9 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
     Vector3 newPos;
     // Update is called once per frame
+private void Start() {
+    Application.targetFrameRate =60;
+}
     void LateUpdate()
     {
         newPos = TargetPlayer.position + offset;

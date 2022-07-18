@@ -8,7 +8,7 @@ using MoreMountains.NiceVibrations;
 public class PlayerController : MonoBehaviour
 {
     
-    
+    public float singleJumpX,singleJumpY,doubleJumpX,doubleJumpY;
     public Transform GraphicTrans;
     public float force;
     public Vector3 centerMass;
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Mouse Up");
             }
         }
-
+{
         // if (down)
         // {
         //     down = false;
@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
         //         FlipObject();
         //     }
         // }
+}
     }
     public static bool IsPointerOverGameObject()
     {
@@ -107,7 +108,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("First Jump");
                 isJump = true;
 
-                rb.velocity = (new Vector3(2f,4f,0) * Time.fixedDeltaTime * force);
+                rb.velocity = (new Vector3(singleJumpX,singleJumpY,0) * Time.fixedDeltaTime * force);
                 FlipObject();
                 // SecondFlip();
                 //StartCoroutine(RotateGraphics(.9f));
@@ -116,7 +117,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("second Jump");
                 secondJump = true;
-                rb.velocity = (new Vector3(1.7f,4.5f, 0) * Time.fixedDeltaTime * force);
+                rb.velocity = (new Vector3(doubleJumpX,doubleJumpY, 0) * Time.fixedDeltaTime * force);
                 // StartCoroutine(RotateGraphics(.9f));
                 // SecondFlip();
                 FlipObject();
@@ -202,7 +203,7 @@ public class PlayerController : MonoBehaviour
                     }
                     else{
                          float remaining = transform.rotation.eulerAngles.z-360;
-                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z ), 1.1f, RotateMode.Fast);
+                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360 ), 1.1f, RotateMode.Fast);
                     }
      }
     void FlipObject1()

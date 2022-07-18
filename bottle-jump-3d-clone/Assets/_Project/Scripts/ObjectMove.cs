@@ -5,15 +5,18 @@ using DG.Tweening;
 public class ObjectMove : MonoBehaviour
 {
     public GameObject targetObject;
+    GameObject _player;
     Rigidbody rb;
     public float duration;
     bool moved;
-    public bool isreverse,infinite;
+    public bool isreverse,infinite,follow;
     public Vector3 targetValueAdd;
     Vector3 startpositon;
     // Start is called before the first frame update
     void Start()
     {
+    
+         _player = GameObject.FindGameObjectWithTag("Player");
         moved = false;
         startpositon = targetObject.transform.position;
         if(isreverse){
@@ -27,6 +30,8 @@ public class ObjectMove : MonoBehaviour
         {
             if(!moved)
             {
+                if(follow)
+                _player.transform.SetParent(targetObject.transform);
                  StartCoroutine(movetotarget());
               
             }
@@ -34,7 +39,22 @@ public class ObjectMove : MonoBehaviour
            
         }
     }
+    private void OnCollisionStay(Collision other) {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if(follow)
+         _player.transform.SetParent(targetObject.transform);
+        }
+    }
+    private void OnCollisionExit(Collision other) {
+         if (other.gameObject.CompareTag("Player")){
+        if(follow)
+              _player.transform.SetParent(null);
+         }
+    }
  private IEnumerator movetotarget(){
+  
+    yield return new WaitForSeconds(.02f);
      targetObject.transform.DOLocalMove(/*targetObject.transform.position +*/ targetValueAdd, duration);
      yield return new WaitForSeconds(duration);
       
@@ -43,12 +63,14 @@ public class ObjectMove : MonoBehaviour
     
     
  }
+
+ 
     private IEnumerator reverse(){
 
         
         if(isreverse){
-       yield return new WaitForSeconds(duration);
-        targetObject.GetComponent<BoxCollider>().isTrigger=true;
+       yield return new WaitForSeconds(0);
+        // targetObject.GetComponent<BoxCollider>().isTrigger=true;
         rb.isKinematic=false;
         }else
         if(infinite)

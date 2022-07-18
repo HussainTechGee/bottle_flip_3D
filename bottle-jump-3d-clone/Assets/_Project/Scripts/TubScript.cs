@@ -6,6 +6,9 @@ public class TubScript : MonoBehaviour
 {
     public Transform TubWater;
     public GameObject CylinderWater;
+
+    public float scaleValue,duration;
+
     bool isTrigger;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class TubScript : MonoBehaviour
             {
                 CylinderWater.SetActive(true);
                 TubWater.gameObject.SetActive(true);
-                TubWater.DOScaleY(0.5f, 2f);
+                TubWater.DOScaleY(scaleValue, duration);
             }
             isTrigger = true;
         }
