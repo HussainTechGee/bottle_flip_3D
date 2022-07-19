@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1785,7 +1785,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.94509804, g: 0.9098039, b: 0.8392157, a: 1}
-  m_Intensity: 0.45
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1842,13 +1842,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.28644103, y: -0.33269364, z: 0.2584091, w: 0.86051804}
+  m_LocalRotation: {x: 0.393148, y: -0.19038619, z: 0.14913674, w: 0.8870998}
   m_LocalPosition: {x: 1.2399998, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 41.676, y: -34.638, z: 19.892}
+  m_LocalEulerAnglesHint: {x: 48.965, y: -19.627, z: 10.079}
 --- !u!1 &727950027
 GameObject:
   m_ObjectHideFlags: 0
@@ -8509,12 +8509,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelcolors:
-  - wallColor: {r: 0.62184054, g: 0.9622642, b: 0.9622642, a: 1}
-    edgeColor: {r: 0.2901961, g: 0.5568628, b: 0.6745098, a: 1}
-    baseColor: {r: 0.47058827, g: 0.76470596, b: 0.8862746, a: 1}
-  - wallColor: {r: 1, g: 0.9785348, b: 0.8915094, a: 1}
-    edgeColor: {r: 0.36862746, g: 0.53333336, b: 0.6392157, a: 1}
-    baseColor: {r: 0.35686275, g: 0.80392164, b: 0.8196079, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.94509804, g: 0.83137256, b: 0.7058824, a: 1}
+    edgeColor: {r: 0.27450982, g: 0.36862746, b: 0.62352943, a: 1}
+    baseColor: {r: 0.93333334, g: 0.60784316, b: 0.39215687, a: 1}
+  - wallColor: {r: 0.94509804, g: 0.8322384, b: 0.7058824, a: 1}
+    edgeColor: {r: 0.27255246, g: 0.36768165, b: 0.6226415, a: 1}
+    baseColor: {r: 0.9339623, g: 0.6087496, b: 0.3912068, a: 1}
+  - wallColor: {r: 0.94509804, g: 0.83137256, b: 0.7058824, a: 1}
+    edgeColor: {r: 0.27450982, g: 0.36862746, b: 0.62352943, a: 1}
+    baseColor: {r: 0.93333334, g: 0.60784316, b: 0.39215687, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
+  - wallColor: {r: 0.7066572, g: 0.88026583, b: 0.9433962, a: 1}
+    edgeColor: {r: 0.2784314, g: 0.47843137, b: 0.5647059, a: 1}
+    baseColor: {r: 0.47058824, g: 0.7176471, b: 0.827451, a: 1}
   wallmat: {fileID: 2100000, guid: e1b456b0965fdba4f9aab292965a4681, type: 2}
   edgemat: {fileID: 2100000, guid: fd6cc951d4cd43042bd1117eee3ca8e9, type: 2}
   basemat: {fileID: 2100000, guid: f0418f42269dbb94498e02e60116a7e1, type: 2}
@@ -8675,7 +8729,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.94509804, g: 0.9098039, b: 0.8392157, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8732,13 +8786,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557019231}
-  m_LocalRotation: {x: -0.45982257, y: 0.20502196, z: -0.84227127, w: 0.19263515}
+  m_LocalRotation: {x: -0.14804105, y: 0.60312074, z: -0.6469984, w: 0.4424051}
   m_LocalPosition: {x: 1.2399998, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 9.684, y: 59.988, z: -148.636}
+  m_LocalEulerAnglesHint: {x: 40.5, y: 72.5, z: -81}
 --- !u!1 &1646183349
 GameObject:
   m_ObjectHideFlags: 0
@@ -9746,7 +9800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
