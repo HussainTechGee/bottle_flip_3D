@@ -60,8 +60,8 @@ public class LevelManager : MonoBehaviour
     }
 
     private void changelevelcolors(){
-        int i =currentLevelIndex;
-        if(i>0&& i<5 || i>30&&i<35 ){
+        
+        if( currentLevelIndex+1 >=0 && currentLevelIndex+1 <= 5 ){
             wallmat.color = levelcolors[0].wallColor;
             edgemat.color = levelcolors[0].edgeColor;
             basemat.color = levelcolors[0].baseColor;
