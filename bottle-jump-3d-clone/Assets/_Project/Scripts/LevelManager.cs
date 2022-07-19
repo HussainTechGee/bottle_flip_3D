@@ -1,9 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [System.Serializable] class _levelcolor{
+        public Color wallColor;
+        public Color edgeColor;
+        public Color baseColor;
+    }
+    [SerializeField] List<_levelcolor> levelcolors;
+    public Material wallmat,edgemat,basemat;
     public GameObject[] AllLevelsList;
     public GameObject FinishParticles;
     public int currentLevelIndex;
@@ -11,6 +20,7 @@ public class LevelManager : MonoBehaviour
     float totalDist,coverDist;
     float startPos;
     Transform Player;
+    public InputField levelinput;
     public static LevelManager instance;
     void Awake()
     {
@@ -23,6 +33,13 @@ public class LevelManager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         StartText.position = new Vector3(startPos+1f, LevelObj.transform.GetChild(0).position.y + 10.3f,StartText.position.z);
         FinishText.position = new Vector3(LevelObj.transform.GetChild(1).position.x+1.5f, LevelObj.transform.GetChild(1).position.y + 10.3f, FinishText.position.z);
+    }
+    public void _customLevel(){
+     int inputlevel = int.Parse(levelinput.text);
+     currentLevelIndex =inputlevel;
+      currentLevelIndex-=1;
+     PlayerPrefs.SetInt("CurrentLevel", currentLevelIndex);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void LevelEnd()
     {
@@ -41,8 +58,23 @@ public class LevelManager : MonoBehaviour
         Particle.GetComponent<ParticleSystem>().Play();
         Debug.Log("Particles");
     }
+
+    private void changelevelcolors(){
+        int i =currentLevelIndex;
+        if(i>0&& i<5 || i>30&&i<35 ){
+            wallmat.color = levelcolors[0].wallColor;
+            edgemat.color = levelcolors[0].edgeColor;
+            basemat.color = levelcolors[0].baseColor;
+        }else{
+             wallmat.color = levelcolors[1].wallColor;
+            edgemat.color = levelcolors[1].edgeColor;
+            basemat.color = levelcolors[1].baseColor;
+        }
+
+    }
     void Update()
     {
+        changelevelcolors();
         if(Player!=null)
         {
             if (coverDist != Mathf.Abs(Player.position.x-startPos))
@@ -53,5 +85,8 @@ public class LevelManager : MonoBehaviour
             
 
         }
+
     }
+
+
 }
