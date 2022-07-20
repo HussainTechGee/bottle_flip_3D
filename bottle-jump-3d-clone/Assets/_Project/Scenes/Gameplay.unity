@@ -1776,19 +1776,20 @@ MonoBehaviour:
   - {fileID: 2979215187789693105, guid: d0ecd97bc49dd3940b46d5807c0e68f9, type: 3}
   - {fileID: 2049638056779720703, guid: 9de62ea0992bbb44c9d24d561893e32d, type: 3}
   - {fileID: 4688812172148965333, guid: d3f32b7c5d2219c4e963b52b115b5b7f, type: 3}
-  - {fileID: 2606930212418205363, guid: 84ab1cd8d3af33241b984b4c47869458, type: 3}
-  - {fileID: 4848784878974162021, guid: 3a0b6ae4a9b2ced48a4b54ad0b5af55e, type: 3}
-  - {fileID: 4910916653821089374, guid: 40758692575142f40a8309b7fdbbd308, type: 3}
-  - {fileID: 3296420900347238432, guid: dff414ed9eb1a7142b24ab586e3c17bd, type: 3}
-  - {fileID: 7893293563382192003, guid: 83f28ada5a3854442b57634b9dcf23c4, type: 3}
-  - {fileID: 2231847317843028670, guid: 6eaf21b93c52247488235ad3726693c1, type: 3}
-  - {fileID: 6601277306938189171, guid: ec4b361272d7a32478b3cdf0c1065576, type: 3}
-  - {fileID: 4790813103912718557, guid: 23952d11bbd62264583ab765ad30b5ea, type: 3}
   - {fileID: 1611829725496018838, guid: c4aa812f63e01fa499f531bf9ceafca3, type: 3}
   - {fileID: 2347010037501028863, guid: 0a4c590918ec59849b2dc6b4127b9325, type: 3}
   - {fileID: 2555963710521487947, guid: 39ba62f821df47b45aa08de2eff1be50, type: 3}
   - {fileID: 1368035599067764763, guid: 1db5a77673ea3b84fba018d1d5ef8f2d, type: 3}
   - {fileID: 2873539625490570018, guid: 2cfee53a5dd2b8340a9ecb0c9ba720e3, type: 3}
+  - {fileID: 2231847317843028670, guid: 6eaf21b93c52247488235ad3726693c1, type: 3}
+  - {fileID: 6601277306938189171, guid: ec4b361272d7a32478b3cdf0c1065576, type: 3}
+  - {fileID: 4790813103912718557, guid: 23952d11bbd62264583ab765ad30b5ea, type: 3}
+  - {fileID: 3062751533461632784, guid: 5df9702b3fbdc8e4c804ff56c4663568, type: 3}
+  - {fileID: 2606930212418205363, guid: 0a0248ed01c272d4dbe6e7c47fdacc57, type: 3}
+  - {fileID: 4848784878974162021, guid: dbd3638594537794c9cb37a96e410970, type: 3}
+  - {fileID: 4910916653821089374, guid: abea7d719033e2d4fab9ffd37708c7a5, type: 3}
+  - {fileID: 3296420900347238432, guid: ef58f00ff04b85a4c96084d2c4010147, type: 3}
+  - {fileID: 7893293563382192003, guid: 9a8d49bde190b964ea402bb6a92cb49e, type: 3}
   wallmat: {fileID: 2100000, guid: e1b456b0965fdba4f9aab292965a4681, type: 2}
   edgemat: {fileID: 2100000, guid: fd6cc951d4cd43042bd1117eee3ca8e9, type: 2}
   basemat: {fileID: 2100000, guid: f0418f42269dbb94498e02e60116a7e1, type: 2}
@@ -7358,7 +7359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 546827573}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: _customLevel
         m_Mode: 1
@@ -8723,7 +8724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1482611658
 Transform:
   m_ObjectHideFlags: 0
@@ -9326,7 +9327,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1869661800}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 546827573}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: select31level
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1869661800
 MonoBehaviour:
   m_ObjectHideFlags: 0

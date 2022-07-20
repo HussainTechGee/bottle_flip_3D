@@ -63,7 +63,7 @@ public class LevelManager : MonoBehaviour
 
     private void changelevelcolors(){
         
-        if( currentLevelIndex+1 >=0 && currentLevelIndex+1 <= 15 ){
+        if(  currentLevelIndex+1 <= 15 ){
             wallmat.color = levelcolors[0].wallColor;
             edgemat.color = levelcolors[0].edgeColor;
             basemat.color = levelcolors[0].baseColor;
@@ -72,6 +72,13 @@ public class LevelManager : MonoBehaviour
             edgemat.color = levelcolors[1].edgeColor;
             basemat.color = levelcolors[1].baseColor;
         }
+
+    }
+
+    public void select31level(){
+        currentLevelIndex =30;
+        PlayerPrefs.SetInt("CurrentLevel", currentLevelIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
     void Update()
