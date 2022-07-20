@@ -12,9 +12,10 @@ public class LevelManager : MonoBehaviour
         public Color baseColor;
     }
     [SerializeField] List<_levelcolor> levelcolors;
-    public Material wallmat,edgemat,basemat;
     public GameObject[] AllLevelsList;
-    public GameObject FinishParticles;
+    public Material wallmat,edgemat,basemat;
+    
+    public GameObject FinishParticles,LevelParent;
     public int currentLevelIndex;
     public Transform StartText,FinishText;
     float totalDist,coverDist;
@@ -33,6 +34,7 @@ public class LevelManager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         StartText.position = new Vector3(startPos+1f, LevelObj.transform.GetChild(0).position.y + 10.3f,StartText.position.z);
         FinishText.position = new Vector3(LevelObj.transform.GetChild(1).position.x+1.5f, LevelObj.transform.GetChild(1).position.y + 10.3f, FinishText.position.z);
+        changelevelcolors();
     }
     public void _customLevel(){
      int inputlevel = int.Parse(levelinput.text);
@@ -74,7 +76,7 @@ public class LevelManager : MonoBehaviour
     }
     void Update()
     {
-        changelevelcolors();
+        
         if(Player!=null)
         {
             if (coverDist != Mathf.Abs(Player.position.x-startPos))
