@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public Vector3 centerMass;
     public ParticleSystem HitParticle;
     public Rigidbody rb;
+    public GameObject brokenBottleprefab;
+    Transform playerBottle;
     bool down, secondJump;
     public bool isJump;
     //      ----------------------------------------Instance
@@ -25,8 +27,8 @@ public class PlayerController : MonoBehaviour
     {
 
         PlayerControllerInstance = this;
-
         rb = GetComponent<Rigidbody>();
+       playerBottle = transform.GetChild(1);
       //  rb.centerOfMass = centerMass;
     }
 
@@ -255,6 +257,9 @@ public class PlayerController : MonoBehaviour
             ground = true;
             DOTween.Kill(rb);
             MMVibrationManager.Haptic(HapticTypes.Failure);
+            Instantiate(brokenBottleprefab,playerBottle.position,playerBottle.rotation);
+            GetComponent<BoxCollider>().isTrigger=true;
+            Destroy(playerBottle.gameObject);
             // Time.timeScale = 0;
             Debug.Log("Game End");
             rb.constraints = RigidbodyConstraints.None; ;

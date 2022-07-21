@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2674047429413400808}
   - component: {fileID: 302708418540525787}
   - component: {fileID: 5971531793119542242}
+  - component: {fileID: 1908887700353284557}
   m_Layer: 0
   m_Name: Kitchen_Toaster
   m_TagString: path
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2674047429413400814}
-  m_LocalRotation: {x: 0.020673476, y: -0.70487446, z: -0.04886514, w: 0.707345}
+  m_LocalRotation: {x: -0.014018861, y: -0.70696783, z: -0.014018861, w: 0.70696783}
   m_LocalPosition: {x: 16.66, y: 4.43, z: 0.38}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
@@ -36,7 +37,7 @@ Transform:
   - {fileID: 2674047430166958844}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.272, y: -89.688, z: -5.644}
+  m_LocalEulerAnglesHint: {x: -2.272, y: -89.688, z: 0}
 --- !u!33 &2674047429413400810
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,8 +98,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 24.782415, y: 27.617584, z: 40.868664}
-  m_Center: {x: -0.19265465, y: 0.000002879904, z: -1.1926901}
+  m_Size: {x: 24.78241, y: 4.910349, z: 6.1781454}
+  m_Center: {x: -0.19265413, y: 9.318537, z: -18.537619}
 --- !u!114 &302708418540525787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +116,7 @@ MonoBehaviour:
   duration: 0.25
   isreverse: 1
   infinite: 0
+  follow: 0
   targetValueAdd: {x: 4.3, y: 60, z: 0.3}
 --- !u!114 &5971531793119542242
 MonoBehaviour:
@@ -132,7 +134,22 @@ MonoBehaviour:
   duration: 0.2
   isreverse: 1
   infinite: 0
+  follow: 0
   targetValueAdd: {x: -3.7, y: 60, z: 0.3}
+--- !u!64 &1908887700353284557
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674047429413400814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8291511778028991884, guid: 4c2c9cca2599247dcbc5b0a28472da38, type: 3}
 --- !u!1 &2674047430166958787
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +347,7 @@ MonoBehaviour:
   duration: 0.5
   isreverse: 1
   infinite: 0
+  follow: 0
   targetValueAdd: {x: 4.3, y: 51, z: 0.3}
 --- !u!54 &8691880181821404438
 Rigidbody:

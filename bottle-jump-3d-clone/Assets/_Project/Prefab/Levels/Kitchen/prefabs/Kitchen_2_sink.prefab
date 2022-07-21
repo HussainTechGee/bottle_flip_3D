@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3152688002525856694}
   - component: {fileID: 3512919279322210914}
   - component: {fileID: 1889714458289891360}
+  - component: {fileID: 866597529263006742}
   m_Layer: 0
   m_Name: Kitchen_2_sink
   m_TagString: path
@@ -115,6 +116,19 @@ MonoBehaviour:
   CylinderWater: {fileID: 7625529648498296731}
   scaleValue: 6.75
   duration: 2
+--- !u!65 &866597529263006742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3512919279322210915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.439679, y: 40.47618, z: 39.05908}
+  m_Center: {x: -3.1317396, y: 85.84352, z: -18.219547}
 --- !u!1 &7625529648498296731
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5023194865395694439}
   - component: {fileID: 7249257554786800468}
   - component: {fileID: 3636307481452736621}
+  - component: {fileID: 3105539028733848594}
+  - component: {fileID: 3459145610109363951}
   m_Layer: 0
   m_Name: Kitchen_Toaster (1)
   m_TagString: path
@@ -28,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5023194865395694433}
-  m_LocalRotation: {x: 0.020673476, y: -0.70487446, z: -0.04886514, w: 0.707345}
+  m_LocalRotation: {x: 0, y: -0.7051789, z: 0, w: 0.70902944}
   m_LocalPosition: {x: 7.0048018, y: 161.08192, z: 104.02341}
   m_LocalScale: {x: 3.5, y: 3.2, z: 4.2}
   m_Children:
@@ -36,7 +38,7 @@ Transform:
   - {fileID: 5023194865579022707}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.272, y: -89.688, z: -5.644}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.688, z: 0}
 --- !u!33 &5023194865395694437
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,10 +97,10 @@ BoxCollider:
   m_GameObject: {fileID: 5023194865395694433}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 24.782415, y: 27.617584, z: 40.868664}
-  m_Center: {x: -0.19265465, y: 0.000002879904, z: -1.1926901}
+  m_Size: {x: 24.612051, y: 26.119535, z: 40.86867}
+  m_Center: {x: 0.49068016, y: -0.74902296, z: -1.1926905}
 --- !u!114 &7249257554786800468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +117,7 @@ MonoBehaviour:
   duration: 0.25
   isreverse: 1
   infinite: 0
+  follow: 0
   targetValueAdd: {x: 4.3, y: 60, z: 0.3}
 --- !u!114 &3636307481452736621
 MonoBehaviour:
@@ -132,7 +135,35 @@ MonoBehaviour:
   duration: 0.2
   isreverse: 1
   infinite: 0
+  follow: 0
   targetValueAdd: {x: -3.7, y: 60, z: 0.3}
+--- !u!65 &3105539028733848594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023194865395694433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.384983, y: 5.2659707, z: 5.535361}
+  m_Center: {x: 0.006095875, y: 9.555391, z: -18.2819}
+--- !u!64 &3459145610109363951
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023194865395694433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8291511778028991884, guid: 4c2c9cca2599247dcbc5b0a28472da38, type: 3}
 --- !u!1 &5023194865579022668
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +361,7 @@ MonoBehaviour:
   duration: 0.5
   isreverse: 1
   infinite: 0
+  follow: 0
   targetValueAdd: {x: 4.3, y: 51, z: 0.3}
 --- !u!54 &1744621611962236569
 Rigidbody:

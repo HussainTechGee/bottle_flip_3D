@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4455631727347553703}
   - component: {fileID: 4206129022209340018}
+  - component: {fileID: 8045334259352825078}
   m_Layer: 0
   m_Name: Kitchen_Saucepan2
   m_TagString: Untagged
@@ -45,6 +46,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &8045334259352825078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935659945968701213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 38.09106, z: 54.57618}
+  m_Center: {x: 0, y: -3.4611957, z: 1.0402787}
 --- !u!1 &9159485548126619686
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +110,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
