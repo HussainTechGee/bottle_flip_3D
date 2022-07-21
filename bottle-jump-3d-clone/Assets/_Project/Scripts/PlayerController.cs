@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     //      ----------------------------------------Instance
     public static PlayerController PlayerControllerInstance;
     [HideInInspector] public bool ground = false, finish = false;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -99,8 +99,13 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if(ground)
+        {
+            return;
+        }
         if (down)
         {
+
             down = false;
             //First Jump
             if (!isJump)
@@ -179,31 +184,33 @@ public class PlayerController : MonoBehaviour
 
     }
     public void FlipObject(){
+        if(ground)
+        { return; }
 
                     if(transform.rotation.eulerAngles.z<315 &&  transform.rotation.eulerAngles.z> 225){
                         //  rb.DORotate(new Vector3(0, 0, 0), 1.1f, RotateMode.Fast); 
                         float remaining = transform.rotation.eulerAngles.z-360;
-                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);  
+                     rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);  
                     }  
                     else  if(transform.rotation.eulerAngles.z < 225 && transform.rotation.eulerAngles.z > 135){
 
                         float remaining = transform.rotation.eulerAngles.z-360;
-                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
+                    rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
 
                     }else if(transform.rotation.eulerAngles.z < 45 || transform.rotation.eulerAngles.z >315){
-                    transform.rotation = Quaternion.identity;
+                        transform.rotation = Quaternion.identity;
                         rb.DORotate(new Vector3(0, 0, -360), 1.1f, RotateMode.LocalAxisAdd);
                     }else
                     
                     if(transform.rotation.eulerAngles.z<135 && transform.rotation.eulerAngles.z>45){
 
                         float remaining = transform.rotation.eulerAngles.z-360;
-                         rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
+                    rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360), 1.1f, RotateMode.Fast);
                        
                     }
                     else{
                          float remaining = transform.rotation.eulerAngles.z-360;
-                        rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360 ), 1.1f, RotateMode.Fast);
+                     rb.DORotate(new Vector3(0, 0, remaining-transform.rotation.eulerAngles.z-360 ), 1.1f, RotateMode.Fast);
                     }
      }
     void FlipObject1()
@@ -237,13 +244,16 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("path"))
         {
             MMVibrationManager.Haptic(HapticTypes.SoftImpact);
+            DOTween.Kill(rb);
             isJump = false;
             secondJump = false;
           //  rb.constraints = RigidbodyConstraints.None;
           //  rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
         }
-        else if (collision.gameObject.CompareTag("ground"))
+        else if (collision.gameObject.CompareTag("ground") && !ground)
         {
+            ground = true;
+            DOTween.Kill(rb);
             MMVibrationManager.Haptic(HapticTypes.Failure);
             // Time.timeScale = 0;
             Debug.Log("Game End");
@@ -252,7 +262,7 @@ public class PlayerController : MonoBehaviour
             {
              //   rb.constraints = RigidbodyConstraints.None;
                 //      ------------------- Bottle reach ground flag
-                ground = true;
+                
                 UIManager.instance.GameLose();
             }
         }

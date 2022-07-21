@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
         
         instance = this;
         currentLevelIndex = PlayerPrefs.GetInt("CurrentLevel");
-        GameObject LevelObj=Instantiate(AllLevelsList[currentLevelIndex], transform);
+        GameObject LevelObj=Instantiate(AllLevelsList[currentLevelIndex], LevelParent.transform);
         startPos = LevelObj.transform.GetChild(0).position.x;
         totalDist = Mathf.Abs(LevelObj.transform.GetChild(1).position.x-startPos);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
     {
         Transform Particle = Instantiate(FinishParticles).GetComponent<Transform>();
         Particle.position = pos;
-        Particle.parent = transform;
+        Particle.parent = LevelParent.transform;
         Particle.GetComponent<ParticleSystem>().Play();
         Debug.Log("Particles");
     }
