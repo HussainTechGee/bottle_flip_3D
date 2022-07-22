@@ -17,10 +17,12 @@ private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+          
           StartCoroutine(bounce());
           PlayerController.PlayerControllerInstance.isJump=true;
           PlayerController.PlayerControllerInstance. rb.velocity = (new Vector3(2f,4f,0) * Time.deltaTime * PlayerController.PlayerControllerInstance.force);
           PlayerController.PlayerControllerInstance.FlipObject();
+          
         }
         
     }

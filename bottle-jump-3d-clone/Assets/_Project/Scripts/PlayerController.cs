@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public GameObject brokenBottleprefab;
     Transform playerBottle;
-    bool down, secondJump;
+    bool down,secondJump;
     public bool isJump;
     //      ----------------------------------------Instance
     public static PlayerController PlayerControllerInstance;
