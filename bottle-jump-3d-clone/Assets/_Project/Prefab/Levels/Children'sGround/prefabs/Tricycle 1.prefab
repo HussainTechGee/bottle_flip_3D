@@ -1,49 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &926117197063235206
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2967569546620426707}
-  - component: {fileID: 6072798347097403445}
-  m_Layer: 0
-  m_Name: coll (1)
-  m_TagString: path
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2967569546620426707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926117197063235206}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1861291750860989996}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6072798347097403445
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926117197063235206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 28.539238, y: 134.2028, z: 93.698364}
-  m_Center: {x: -50.729294, y: -0.3768206, z: 0.52879256}
 --- !u!1 &2782056734052319407
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +57,7 @@ GameObject:
   - component: {fileID: 3764082830475112248}
   - component: {fileID: 5655057168023283045}
   - component: {fileID: 7102049195578733714}
+  - component: {fileID: 8173344457155913099}
   m_Layer: 0
   m_Name: Tricycle 1
   m_TagString: path
@@ -120,7 +77,6 @@ Transform:
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_Children:
   - {fileID: 8297644339057122822}
-  - {fileID: 2967569546620426707}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -206,4 +162,18 @@ MonoBehaviour:
   duration: 1.5
   isreverse: 0
   infinite: 0
+  follow: 0
   targetValueAdd: {x: 34.26, y: 0.46, z: 1.26}
+--- !u!65 &8173344457155913099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791921746565653888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.956758, y: 134.25117, z: 101.61272}
+  m_Center: {x: -46.819843, y: 0, z: 0}

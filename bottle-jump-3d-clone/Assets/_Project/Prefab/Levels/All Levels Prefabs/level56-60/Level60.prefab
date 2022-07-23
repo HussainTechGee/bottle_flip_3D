@@ -292,6 +292,18 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1803796384052551892, guid: e8a8a9f638511d44f9791c0c16623590, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.6436996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803796384052551892, guid: e8a8a9f638511d44f9791c0c16623590, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803796384052551892, guid: e8a8a9f638511d44f9791c0c16623590, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803796384052551892, guid: e8a8a9f638511d44f9791c0c16623590, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
       objectReference: {fileID: 0}
@@ -417,7 +429,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1134088164918116266, guid: 61828f03f611fb2479b7aff43060e78c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 61828f03f611fb2479b7aff43060e78c, type: 3}
 --- !u!4 &6300194945889031419 stripped
 Transform:
@@ -497,6 +510,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2107620575244207022}
     m_Modifications:
+    - target: {fileID: 649998227716070910, guid: d1a01e8c79ddca14985858fd42e76578, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8cb230f9304c67f42a754a4a119c0a90, type: 2}
     - target: {fileID: 6049273869915506976, guid: d1a01e8c79ddca14985858fd42e76578, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1271,6 +1288,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2107620575244207022}
     m_Modifications:
+    - target: {fileID: 3218149487172762035, guid: c834b9ade6334c142b373e57e118c345, type: 3}
+      propertyPath: duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3218149487172762035, guid: c834b9ade6334c142b373e57e118c345, type: 3}
+      propertyPath: targetValueAdd.x
+      value: 16.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3218149487172762035, guid: c834b9ade6334c142b373e57e118c345, type: 3}
+      propertyPath: targetValueAdd.z
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3468591173637477450, guid: c834b9ade6334c142b373e57e118c345, type: 3}
       propertyPath: m_Name
       value: Skateboard
@@ -1321,7 +1350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101002649390443335, guid: c834b9ade6334c142b373e57e118c345, type: 3}
       propertyPath: duration
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5101002649390443335, guid: c834b9ade6334c142b373e57e118c345, type: 3}
       propertyPath: targetValueAdd.x
@@ -1329,7 +1358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101002649390443335, guid: c834b9ade6334c142b373e57e118c345, type: 3}
       propertyPath: targetValueAdd.z
-      value: 1.1
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c834b9ade6334c142b373e57e118c345, type: 3}

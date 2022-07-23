@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1248128194794253272}
   - component: {fileID: 649998227716070910}
   - component: {fileID: 6863667464816433833}
+  - component: {fileID: 5538029611073024835}
   m_Layer: 0
   m_Name: Stand
   m_TagString: path
@@ -122,7 +123,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6513408380307845827}
-  m_Material: {fileID: 13400000, guid: e9434b14efb33744197dfa4a9f2c3423, type: 2}
+  m_Material: {fileID: 13400000, guid: 8cb230f9304c67f42a754a4a119c0a90, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -144,3 +145,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5538029611073024835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513408380307845827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffa210897e9247488b0f4dd364aac21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTran: {fileID: 6049273869915506976}
+  rotateValue: {x: 0, y: 180, z: 25}
+  infinity: 0
+  reverse: 0
+  duration: 1

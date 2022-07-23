@@ -257,9 +257,7 @@ public class PlayerController : MonoBehaviour
             ground = true;
             DOTween.Kill(rb);
             MMVibrationManager.Haptic(HapticTypes.Failure);
-            Instantiate(brokenBottleprefab,playerBottle.position,playerBottle.rotation);
-            GetComponent<BoxCollider>().isTrigger=true;
-            Destroy(playerBottle.gameObject);
+            
             // Time.timeScale = 0;
             Debug.Log("Game End");
             rb.constraints = RigidbodyConstraints.None; ;
@@ -267,8 +265,10 @@ public class PlayerController : MonoBehaviour
             {
              //   rb.constraints = RigidbodyConstraints.None;
                 //      ------------------- Bottle reach ground flag
-                
-                UIManager.instance.GameLose();
+            Instantiate(brokenBottleprefab,playerBottle.position,playerBottle.rotation);
+            GetComponent<BoxCollider>().isTrigger=true;
+            Destroy(playerBottle.gameObject);
+            UIManager.instance.GameLose();
             }
         }
 
