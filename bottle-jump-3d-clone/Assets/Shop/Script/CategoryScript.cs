@@ -10,6 +10,7 @@ public class CategoryScript : MonoBehaviour
     public List<string> CategoryPageName;
     public GameObject[] AllitemsList;
     public Transform PurchasedButton;
+    public Image SelectedImage;
     public Color selected, canSelect, none;
     public MagneticScrollRect magneticScript;
 
@@ -18,8 +19,10 @@ public class CategoryScript : MonoBehaviour
     public int currentIndex;
     public int currentPage;
     [Header("For Random Purchase")]
+    public int[] ItemCountPerPage;
     public bool isRandom;
-    public int[] itemPriceList;
+    public int RandomItemPrice;
+   // public int[] itemPriceList;
 
     List<int> UnpurchaseCurrentPage;
     public static CategoryScript instance;
@@ -27,6 +30,10 @@ public class CategoryScript : MonoBehaviour
     {
         instance = this;
         Init();
+    }
+    void Start()
+    {
+        ButtonCheck();
     }
     void Init()
     {
@@ -79,12 +86,36 @@ public class CategoryScript : MonoBehaviour
         DesCriptionText.text = CategoryPageName[currentPage];
         UpdateUnpurchaseList();
     }
+    void ButtonCheck()
+    {
+        if (CoinManager.instance.TotalCoin >= RandomItemPrice)
+        {
+            PurchasedButton.GetComponent<Button>().interactable=true;
+        }
+        else
+        {
+            PurchasedButton.GetComponent<Button>().interactable = false;
+        }
+    }
     void UpdateUnpurchaseList()
     {
         //List Update
+        ButtonCheck();
         UnpurchaseCurrentPage = new List<int>();
         currentPage = magneticScript.CurrentSelectedIndex;
-        for (int i = currentPage * 9; i < (currentPage + 1) * 9; i++)
+        int start = 0, end = 0;
+        for (int i = 0; i < ItemCountPerPage.Length; i++)
+        {
+            if (i < currentPage)
+            {
+                start += ItemCountPerPage[i];
+            }
+            if(i<=currentPage)
+            {
+                end += ItemCountPerPage[i];
+            }
+        }
+        for (int i = start * 9; i < end; i++)
         {
             if (!PurchaseIndexList.bools[i])
             {
@@ -96,31 +127,32 @@ public class CategoryScript : MonoBehaviour
 
     public void itemButtonClicked(int index)
     {
-        if (isRandom)
-        {
-            return;
-        }
+        ////if (isRandom)
+        ////{
+        ////    return;
+        ////}
         //Already Purchased
         if (PurchaseIndexList.bools[index])
         {
-            PurchasedButton.GetChild(0).gameObject.SetActive(false);
-            PurchasedButton.GetChild(1).gameObject.SetActive(false);
-            PurchasedButton.GetChild(2).gameObject.SetActive(true);
+            //PurchasedButton.GetChild(0).gameObject.SetActive(false);
+            //PurchasedButton.GetChild(1).gameObject.SetActive(false);
+            //PurchasedButton.GetChild(2).gameObject.SetActive(true);
+            SelectedImage.sprite = AllitemsList[index].transform.GetChild(0).GetChild(0).GetComponent <Image>().sprite;
             itemButtonColor(index, selected, true);
             currentIndex = index;
             PlayerPrefs.SetInt(CategoryName + "currentIndex", currentIndex);
         }
-       else //Not Purchased
-        {
-            PurchasedButton.GetChild(0).gameObject.SetActive(true);
-            PurchasedButton.GetChild(1).gameObject.SetActive(true);
-            PurchasedButton.GetChild(2).gameObject.SetActive(false);
+       //else //Not Purchased
+       // {
+       //     PurchasedButton.GetChild(0).gameObject.SetActive(true);
+       //     PurchasedButton.GetChild(1).gameObject.SetActive(true);
+       //     PurchasedButton.GetChild(2).gameObject.SetActive(false);
 
-            PurchasedButton.GetChild(0).GetComponent<Text>().text = itemPriceList[index].ToString();
+       //     PurchasedButton.GetChild(0).GetComponent<Text>().text = itemPriceList[index].ToString();
 
-            itemButtonColor(index, canSelect, false);
+       //     itemButtonColor(index, canSelect, false);
 
-        }
+       // }
 
     }
     void itemButtonColor(int index,Color c,bool flag)
@@ -161,6 +193,10 @@ public class CategoryScript : MonoBehaviour
     }
     public void OnClickPurchase()
     {
+        if(CoinManager.instance.TotalCoin<RandomItemPrice)
+        {
+            return;
+        }
         //Check Valid For Purchase
         if (UnpurchaseCurrentPage.Count > 1)
         {
@@ -200,6 +236,7 @@ public class CategoryScript : MonoBehaviour
     }
     void ItemPurchase(int itemNO)
     {
+        CoinManager.instance.RemoveCoin(RandomItemPrice);
         GameObject current= AllitemsList[itemNO];
         current.transform.GetChild(1).gameObject.SetActive(false);
         current.transform.GetChild(2).gameObject.SetActive(false);
