@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool inGame;
+    public static int LoseCount = 0;
     // public GameObject wall,floorbase,edge1,edge2;
     // public Color[] color1,color2;
     public static GameManager instance;

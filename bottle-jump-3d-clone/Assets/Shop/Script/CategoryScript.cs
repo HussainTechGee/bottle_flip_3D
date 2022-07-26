@@ -115,7 +115,7 @@ public class CategoryScript : MonoBehaviour
                 end += ItemCountPerPage[i];
             }
         }
-        for (int i = start * 9; i < end; i++)
+        for (int i = start; i < end; i++)
         {
             if (!PurchaseIndexList.bools[i])
             {

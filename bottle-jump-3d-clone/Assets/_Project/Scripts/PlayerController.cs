@@ -286,6 +286,11 @@ public class PlayerController : MonoBehaviour
             }
             
         }
+        else if(other.gameObject.CompareTag("coin"))
+        {
+            other.gameObject.SetActive(false);
+            CoinManager.instance.CoinAdd(10);
+        }
         else if(other .gameObject.CompareTag("path"))
         {
             HitParticle.Play();

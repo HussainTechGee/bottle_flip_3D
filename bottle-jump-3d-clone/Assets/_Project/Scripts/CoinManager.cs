@@ -6,8 +6,14 @@ public class CoinManager : MonoBehaviour
 {
     public static CoinManager instance;
     public int TotalCoin;
+    public bool isTesting;
     private void Awake()
     {
+
+        if(isTesting)
+        {
+            PlayerPrefs.SetInt("totalcoin", TotalCoin);
+        }
         instance = this;
         TotalCoin = PlayerPrefs.GetInt("totalcoin");
     }
@@ -15,6 +21,7 @@ public class CoinManager : MonoBehaviour
     {
         TotalCoin = TotalCoin + amount;
         PlayerPrefs.SetInt("totalcoin", TotalCoin);
+        UIManager.instance.CoinRefresh();
     }
     public void RemoveCoin(int amount)
     {
@@ -22,6 +29,7 @@ public class CoinManager : MonoBehaviour
         {
             TotalCoin = TotalCoin - amount;
             PlayerPrefs.SetInt("totalcoin", TotalCoin);
+            UIManager.instance.CoinRefresh();
         }
         else
         {
