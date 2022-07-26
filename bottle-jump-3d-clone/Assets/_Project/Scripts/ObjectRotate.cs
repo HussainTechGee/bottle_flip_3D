@@ -7,7 +7,7 @@ public class ObjectRotate : MonoBehaviour
     public Transform targetTran;
     public Vector3 rotateValue;
     public bool infinity,reverse;
-    public float duration;
+    public float duration=2f;
     bool isRotate;
     Vector3 currentrotation ;
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class ObjectRotate : MonoBehaviour
                 if (infinity)
                 {
                     targetTran.gameObject.SetActive(true);
-                    targetTran.DOLocalRotate(rotateValue, 2f, RotateMode.LocalAxisAdd).SetLoops(-1).SetEase(Ease.Linear);
+                    targetTran.DOLocalRotate(rotateValue, duration, RotateMode.LocalAxisAdd).SetLoops(-1).SetEase(Ease.Linear);
                 }
                 else
                 {
