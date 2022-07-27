@@ -25,10 +25,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        PlayerControllerInstance = this;
-        rb = GetComponent<Rigidbody>();
-       playerBottle = transform.GetChild(1);
+      PlayerControllerInstance = this;
+      rb = GetComponent<Rigidbody>();
+      playerBottle = transform.GetChild(1);
       //  rb.centerOfMass = centerMass;
     }
 

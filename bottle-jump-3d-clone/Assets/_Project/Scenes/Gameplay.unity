@@ -5115,6 +5115,16 @@ MonoBehaviour:
   - {fileID: 2053809060636887759, guid: 5b32106c95df8434a8eec5e552d2ffe0, type: 3}
   - {fileID: 6134958363036989600, guid: feaad0dd8571f7c43a86da2dd0dea1a9, type: 3}
   - {fileID: 2017655779010453625, guid: 6cefee2f29d834146a50c04a54f6640c, type: 3}
+  - {fileID: 9163178038193877782, guid: 6157c237c345d5049b4770455893d08c, type: 3}
+  - {fileID: 8478566000621094045, guid: 95fa918e123cba14a9af2a89ffb53b81, type: 3}
+  - {fileID: 527966347150020067, guid: 4a7cb4012e0a1e24d917e02f1d448df8, type: 3}
+  - {fileID: 4396613331978009286, guid: 95024a61a36d91a4aa9e03eb041b0582, type: 3}
+  - {fileID: 8481919412595423872, guid: 0cd9ad80a5d0ee745a0f86e652d2006f, type: 3}
+  - {fileID: 2893061899547628830, guid: 5337974e586dbdf4794dcce369783b6c, type: 3}
+  - {fileID: 3768747871003733882, guid: 94e343c9f9a08ea4bbcd9a8d9434ddad, type: 3}
+  - {fileID: 1342159511752408467, guid: 07d788cf252e33b45a9289d177c1bd6f, type: 3}
+  - {fileID: 5892025860503091372, guid: 6c83b63232d86494aa56658cf20a818d, type: 3}
+  - {fileID: 7126848084018258387, guid: dffe479b92f0e2b4f9b30b871c63ba27, type: 3}
   wallmat: {fileID: 2100000, guid: e1b456b0965fdba4f9aab292965a4681, type: 2}
   edgemat: {fileID: 2100000, guid: fd6cc951d4cd43042bd1117eee3ca8e9, type: 2}
   basemat: {fileID: 2100000, guid: f0418f42269dbb94498e02e60116a7e1, type: 2}
@@ -11988,7 +11998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -7.5815, y: -209.2023}
+  m_AnchoredPosition: {x: -1, y: -221}
   m_SizeDelta: {x: 236.3815, y: 240.9842}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &842406363
@@ -12004,14 +12014,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2901961}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1c1d29f153f98364ca23263a0c96c8a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2d0036d3d484424aa74ce83d98e050e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16655,7 +16665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f82bf0b1754e6fe4bb25635827342451, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 357e502cdf078d04295ac7450d12d5e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23975,7 +23985,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1 to 63
+  m_Text: 1 to 100
 --- !u!222 &2081044843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24419,7 +24429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f82bf0b1754e6fe4bb25635827342451, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 357e502cdf078d04295ac7450d12d5e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24735,8 +24745,8 @@ MonoBehaviour:
   PurchasedButton: {fileID: 1426286270462188235}
   SelectedImage: {fileID: 94403930}
   selected: {r: 0.8784314, g: 0.78431374, b: 0.1254902, a: 1}
-  canSelect: {r: 0.5283019, g: 0.5103596, b: 0.5103596, a: 1}
-  none: {r: 0.96470594, g: 0.96470594, b: 0.96470594, a: 1}
+  canSelect: {r: 0.5294118, g: 0.50980395, b: 0.50980395, a: 1}
+  none: {r: 0, g: 0, b: 0, a: 1}
   magneticScript: {fileID: 3032194033369788813}
   PurchaseIndexList:
     bools: 010000000000000000000000000000000000000000000000000000
@@ -25264,8 +25274,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a3d766705e8fce41bcaa2921051a083, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: dd698dbd645b0a34f922b21bdc91ee2d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -25340,8 +25350,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a3d766705e8fce41bcaa2921051a083, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: dd698dbd645b0a34f922b21bdc91ee2d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -25507,7 +25517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.87843144, g: 0.7843138, b: 0.1254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
